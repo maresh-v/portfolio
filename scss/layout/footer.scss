@@ -1,0 +1,117 @@
+@use '../abstracts' as abs;
+
+.footer { 
+    width: 80%;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 10vw;
+
+    @include abs.md {
+        margin-bottom: 60px;
+    }
+
+    &__text {
+        width: 100%;
+        font-family: Caveat, cursive;
+        font-size: 8vw;
+        text-align: center;
+
+        @include abs.md {
+            font-size: 4vw;
+        }
+
+        @include abs.lg {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__button {
+        height: fit-content;
+        width: fit-content;
+        margin: 5vw auto;
+        padding: 1vw 2.5vw;
+        font-family: Rubik Mono One, monospace;
+        font-size: 3.5vw;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: abs.$clr-black;
+        background-color: abs.$clr-basic-yellow;
+        border: .5vw solid abs.$clr-black;
+        box-shadow: .7vw .7vw 0px abs.$clr-black;
+
+        @include abs.md {
+            margin: 3vw;
+            font-size: 1.9vw;
+            padding: .8vw 1.5vw;
+            border: .35vw solid abs.$clr-black;
+            box-shadow: .35vw .35vw 0px abs.$clr-black;
+        }
+
+        @include abs.lg {
+            margin: 50px;
+            font-size: 1.125rem;
+            padding: .5rem 1.75rem;
+            border: .3125rem solid abs.$clr-black;
+            box-shadow: .3125rem .3125rem 0px abs.$clr-black;
+            transition: transform .2s;
+            transition: box-shadow .2s;
+            transition: background-color .1s;
+
+            &:hover {
+                background-color: abs.$clr-basic-yellow-hover;
+            }
+
+            &:active {
+                transform: scale(.98);
+                box-shadow: .25rem .25rem 0px abs.$clr-black;
+            }
+        }
+    }
+
+    &__mail {
+        width: 100%;
+        text-align: center;
+        font-family: Rubik, sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: abs.$clr-black;
+        font-size: 3vw;
+        letter-spacing: .3em;
+
+        @include abs.md {
+            width: 60%;
+            font-size: 1.5vw;
+            padding: 2vw 0 0 0;
+        }
+
+        @include abs.lg {
+            width: 60%;
+            font-size: .875rem;
+            padding: 0;
+        }
+    }
+
+    &__source{
+        margin-top: 10vw;
+        font-family: Caveat, cursive;
+        font-size: 5vw;
+
+        @include abs.md {
+            margin-top: 9vw;
+            font-size: 3vw;
+
+        }
+
+        @include abs.lg{
+            margin-top: 80px;
+            font-size: 1.5rem;
+        }
+
+        a{
+            color: abs.$clr-black;
+        }
+    }
+}

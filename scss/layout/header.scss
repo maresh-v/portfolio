@@ -1,0 +1,234 @@
+@use '../abstracts' as abs;
+
+header{
+    max-width: 100%;
+    margin-top: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+
+    @include abs.md{
+        flex-wrap: nowrap;
+    }
+
+    @include abs.lg{
+        margin-top: 5rem;
+    }
+}
+
+.profile{
+    width: 30%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    @include abs.md{
+        width: 20%;
+    }
+
+    @include abs.lg{
+        width: 20%;
+    }
+    
+    &__img{
+        width: 90%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        background-color: abs.$clr-basic-yellow;
+        border: .8vw solid abs.$clr-black;
+        box-shadow: .7vw .7vw 0px abs.$clr-black;
+
+        @include abs.md{
+            border: .5vw solid abs.$clr-black;
+            box-shadow: .4vw .4vw 0px abs.$clr-black;
+        }
+
+        @include abs.lg{
+            border: 5px solid abs.$clr-black;
+            box-shadow: 5px 5px 0px abs.$clr-black;
+        }
+    }
+
+    &__name{
+        position: absolute;
+        bottom: -4vw;
+        font-family: Rubik, sans-serif;
+        font-size: 5.5vw;
+        text-transform: uppercase;
+        white-space: nowrap;
+        color: abs.$clr-basic-yellow;
+        text-shadow: .4vw .4vw 0px abs.$clr-black;
+        -webkit-text-stroke: .3vw abs.$clr-black;    
+
+        @include abs.md{
+            font-size: 3.5vw;
+            -webkit-text-stroke: .2vw abs.$clr-black;
+            text-shadow: .3vw .3vw 0px abs.$clr-black;
+            bottom: -2.5vw;
+        }
+
+        @include abs.lg{
+            font-size: 2.75rem;
+            -webkit-text-stroke: 2px abs.$clr-black;
+            text-shadow: 3px 3px 0px abs.$clr-black;
+            bottom: -30px;
+        }
+    }
+}
+
+.intro-text{
+    width: 60%;
+    margin: 2vw 0 0 7vw;
+    transform: rotate(-10deg);
+    font-family: Caveat, cursive;
+    font-size: 4vw;
+    font-weight: 600;
+
+    @include abs.md{
+        width: 25%;
+        font-size: 2vw;
+        margin: 1vw 0 0 4vw;
+    }
+
+    @include abs.lg{
+        width: 30%;
+        font-size: 1.75rem;
+        margin: 1rem 0 0 4rem;
+    }
+}
+
+.contact-top{
+    width: 100%;
+    margin-top: 12vw;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    @include abs.md{
+        width: 50%;
+        margin-top: 0;
+        font-size: 2.5vw;
+        margin-left: auto;
+        
+    }
+    
+    &__mail{
+        width: 100%;
+        order: 1;
+        text-align: center;
+        font-family: Rubik, sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: abs.$clr-black;
+        font-size: 3vw;
+        letter-spacing: .3em;    
+
+        @include abs.md{
+            width: 60%;
+            font-size: 1.1vw;
+            padding: 4vw 0 0 0;
+        }
+
+        @include abs.lg{
+            width: 60%;
+            font-size: .875rem;
+            padding: 3rem 0 0 0;
+        }
+    }
+
+    &__button{
+        order: 3;
+        height: fit-content;
+        margin: 7vw 5vw 0 auto;
+        padding: 1vw 2.5vw;
+        font-family: Rubik Mono One, monospace;
+        font-size: 3.5vw;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: abs.$clr-black;
+        background-color: abs.$clr-basic-yellow;
+        border: .5vw solid abs.$clr-black;
+        box-shadow: .7vw .7vw 0px abs.$clr-black;
+
+        @include abs.md{
+            order: 2;
+            font-size: 1.5vw;
+            padding: .5vw 1.25vw;
+            border: .25vw solid abs.$clr-black;
+            box-shadow: .35vw .35vw 0px abs.$clr-black;
+            margin: 0 0 0 auto;
+        } 
+
+        @include abs.lg{
+            font-size: .975rem;
+            padding: .375rem 1.25rem;
+            border: .25rem solid abs.$clr-black;
+            box-shadow: .3rem .3rem 0px abs.$clr-black;
+
+            transition: transform .2s;
+            transition: box-shadow .2s;
+            transition: background-color .1s;
+
+            &:hover{
+                background-color: abs.$clr-basic-yellow-hover;
+            }
+
+            &:active{
+                transform: scale(.98);
+                box-shadow: .2rem .2rem 0px abs.$clr-black;
+            }
+        }
+    }
+
+    &__text{
+        order: 2;
+        margin: 10vw 0 0 8vw;
+        font-family: Caveat, cursive;
+        font-size: 6vw;
+
+        @include abs.md{
+            order: 3;
+            font-size: 2.5vw;
+            margin: 9vw 0 0 23vw;
+        }
+
+        @include abs.lg{
+            font-size: 2.125rem;
+            margin: 6rem 0 0 17.5rem;
+        }
+    }
+
+    &::after{
+        content: "";
+        display: block;
+        width: 15vw;
+        height: 15vw;
+        left: 0;
+        right: 5vw;
+        top: 6vw;
+        margin: auto;
+        background-image: url(../images/arrows-header-contact.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+
+        @include abs.md{
+            width: 10vw;
+            height: 10vw;
+            transform: rotate(-50deg);
+            top: 4vw;
+            left: 10vw;
+            right: 0;
+        }
+
+        @include abs.lg{
+            width: 7rem;
+            height: 7rem;
+            top: 3rem;
+            left: 10rem;
+        }
+    }
+}

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no">
+    <link rel="stylesheet" href="public/style.css">
+    <script src="js/card-deck.js" defer></script>
+    <script src="js/carousel.js" defer></script>
+    <script src="js/on-scroll.js" defer></script>
+    <link rel="icon" type="image/svg" sizes="32x32" href="images/m-icon.svg">
+    <title>Portfolio | Maresh.cz</title>
+  </head>
+
+  <body class="maresh-home">
+    <div class="page-content">
+      <header class="hidden">
+        <div class="profile">
+          <img class="profile__img" src="/images/vm-profile-photo.png" alt="Vít Mareš – profilová fotografie">
+          <h1 class="profile__name">Vít Mareš</h1>
+        </div>
+        <p class="intro-text">Po technické SŠ a&nbsp;netechnické VŠ, pětileté copywpriterské praxi a&nbsp;mnoha večerech
+          samoučení mířím za svou první front-endovou příležitostí.</p>
+        <div class="contact-top">
+          <a href="mailto:vit.mares@outlook.com" class="contact-top__mail">vit.mares@outlook.com</a>
+          <a href="https://www.linkedin.com/in/v%C3%ADt-mare%C5%A1-2b9583152" class="contact-top__button" target="_blank">Linkedin</a>
+          <p class="contact-top__text">Napište mi!</p>
+        </div>
+      </header>
+      <main>
+        <section class="projects-menu hidden">
+          <h2 class="projects-menu__heading">Projekty</h2>
+          <div class="projects-menu__list" data-carousel-role="project-name-container">
+            <button data-carousel-role="project-name">Todo List</button>
+            <button data-carousel-role="project-name">Kalkulačka</button>
+            <button data-carousel-role="project-name">IP Lokátor</button>
+            <button data-carousel-role="project-name">Generátor Životních Mouder</button>
+          </div>
+          </section>
+
+          <section class="carousel hidden">
+            <button class="carousel-btn-bck" data-carousel-role="back-button"
+              data-carousel-role="back-button">&lt;</button>
+            <div class="carousel-content-wrapper" data-carousel-role="content">
+              <div class="carousel-content" data-carousel-role="front">
+                <div class="project project--todo">
+                  <img src="images/todo-preview.png" alt="Todo List" class="project-image">
+      
+                  <div class="project-about">
+                    <h3 class="project-about__heading">Todo List</h3>
+      
+                    <div class="project-about__icons">
+                      <img src="images/html-icon.png" alt="HTML" title="HTML">
+                      <img src="images/sass-icon.png" alt="SASS" title="SASS">
+                      <img src="images/js-icon.png" alt="JavaScript" title="JavaScript">
+                      <img src="images/fireship-icon.png" alt="Firebase" title="Firebase">
+                    </div>
+      
+                    <p class="project-about__text">Úkolníček, který umožňuje měnit pořadí úkolů (drag and drop) a&nbsp;filtrovat úkoly podle jejich stavu. Do aplikace jsem také přidal přihlášení pomocí Google a&nbsp;ukládání úkolů pro každého uživatele – vyzkoušel jsem si díky tomu službu Firebase.</p>
+      
+                    <div class="project-about__buttons">
+                      <a href="https://github.com/maresh-v/todo-list" class="project-about__button project-about__button--code" target="_blank">
+                        <img src="/images/source-code-icon.png" alt="GitHub">
+                      </a>
+                      <a href="https://todo.maresh.cz/" class="project-about__button project-about__button--visit" target="_blank">
+                        <span>Prohlédnout &gt;</span>
+                      </a>
+      
+                      <div class="project-about__guide-arrow">
+                        <span>GitHub</span>
+                      </div>
+                    </div>
+                    <p class="project-about__attribution">Zpracováno dle grafického návrhu frontendmentor.com</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-content" data-carousel-role="back" data-hidden="true"></div>
+            </div>
+            <button class="carousel-btn-fwd" data-carousel-role="forward-button" data-carousel-role="forward-button">&gt;</button>
+          <div style="display: none;" data-carousel-role="storage">
+            <div class="project project--todo">
+              <img src="images/todo-preview.png" alt="Todo List" class="project-image">
+              <div class="project-about">
+                <h3 class="project-about__heading">Todo List</h3>
+                <div class="project-about__icons">
+                  <img src="images/html-icon.png" alt="HTML" title="HTML">
+                  <img src="images/sass-icon.png" alt="SASS" title="SASS">
+                  <img src="images/js-icon.png" alt="JavaScript" title="JavaScript">
+                  <img src="images/fireship-icon.png" alt="Firebase" title="Firebase">
+                </div>
+                <p class="project-about__text">Úkolníček, který umožňuje měnit pořadí úkolů (drag and drop) a&nbsp;filtrovat úkoly podle jejich stavu. Do aplikace jsem také přidal přihlášení pomocí Google a&nbsp;ukládání úkolů pro každého uživatele – vyzkoušel jsem si díky tomu službu Firebase.</p>
+                <div class="project-about__buttons">
+                  <a href="https://github.com/maresh-v/todo-list" class="project-about__button project-about__button--code" target="_blank">
+                    <img src="/images/source-code-icon.png" alt="GitHub">
+                  </a>
+                  <a href="https://todo.maresh.cz/" class="project-about__button project-about__button--visit" target="_blank">
+                    <span>Prohlédnout &gt;</span>
+                  </a>
+                  <div class="project-about__guide-arrow">
+                    <span>GitHub</span>
+                  </div>
+                </div>
+                <p class="project-about__attribution">Zpracováno dle grafického návrhu frontendmentor.com</p>
+              </div>
+            </div>
+  
+            <div class="project project--calculator">
+              <img src="images/calculator-preview.png" alt="Kalkulačka" class="project-image">
+  
+              <div class="project-about">
+                <h3 class="project-about__heading">Kalkulačka s&nbsp;barevnými motivy</h3>
+                <div class="project-about__icons">
+                  <img src="images/html-icon.png" alt="HTML" title="HTML">
+                  <img src="images/sass-icon.png" alt="SASS" title="SASS">
+                  <img src="images/js-icon.png" alt="JavaScript" title="JavaScript">
+                </div>
+                <p class="project-about__text">Aplikace se základními funkcemi kalkulačky, ovládáním z hardwarové klávesnice, ošetřením vstupu a&nbsp;možností přepínání barevných motivů. Motivy se volí také na základě systémové preference uživatele a&nbsp;ukládají se mezi relacemi.</p>
+                <div class="project-about__buttons">
+                  <a href="https://github.com/maresh-v/calculator" class="project-about__button project-about__button--code" target="_blank">
+                    <img src="/images/source-code-icon.png" alt="GitHub">
+                  </a>
+                  <a href="https://calculator.maresh.cz/" class="project-about__button project-about__button--visit" target="_blank">
+                    <span>Prohlédnout &gt;</span>
+                  </a>
+                  <div class="project-about__guide-arrow">
+                    <span>GitHub</span>
+                  </div>
+                </div>
+                <p class="project-about__attribution">Zpracováno dle grafického návrhu frontendmentor.com</p>
+              </div>
+            </div>
+  
+            <div class="project project--ip">
+              <img src="images/ip-tracker-preview.png" alt="IP lokátor" class="project-image">
+              <div class="project-about">
+                <h3 class="project-about__heading">IP lokátor</h3>
+                <div class="project-about__icons">
+                  <img src="images/html-icon.png" alt="HTML" title="HTML">
+                  <img src="images/sass-icon.png" alt="SASS" title="SASS">
+                  <img src="images/js-icon.png" alt="JavaScript" title="JavaScript">
+                  <img src="images/api-icon.png" alt="API" title="API">
+                </div>
+                <p class="project-about__text">Aplikace využívá API ipify pro získání souřadnic a&nbsp;dalších údajů o&nbsp;zadané IP adrese. Zároveň s&nbsp;těmito informacemi zobrazí  uživateli přibližnou polohu na mapě vygenerované pomocí API Mapy.cz.</p>
+                <div class="project-about__buttons">
+                  <a href="https://github.com/maresh-v/ip-tracker" class="project-about__button project-about__button--code" target="_blank">
+                    <img src="/images/source-code-icon.png" alt="GitHub">
+                  </a>
+                  <a href="https://ip-tracker.maresh.cz/" class="project-about__button project-about__button--visit" target="_blank">
+                    <span>Prohlédnout &gt;</span>
+                  </a>
+                  <div class="project-about__guide-arrow">
+                    <span>GitHub</span>
+                  </div>
+                </div>
+                <p class="project-about__attribution">Zpracováno dle grafického návrhu frontendmentor.com</p>
+              </div>
+            </div>
+  
+            <div class="project project--generator">
+              <img src="images/generator-preview.png" alt="Generátor životních mouder" class="project-image">
+              <div class="project-about">
+                <h3 class="project-about__heading">Generátor životních mouder</h3>
+                <div class="project-about__icons">
+                  <img src="images/html-icon.png" alt="HTML" title="HTML">
+                  <img src="images/sass-icon.png" alt="SASS" title="SASS">
+                  <img src="images/js-icon.png" alt="JavaScript" title="JavaScript">
+                  <img src="images/api-icon.png" alt="API" title="API">
+                </div>
+                <p class="project-about__text">Velmi jednoduchá aplikace pro generování rad a&nbsp;mouder. Jeden z mých úplně prvních tréninkových úkolů. Uživatel klikne na tlačítko, načež se mu zobrazí moudro a&nbsp;jeho číslo, obojí získané pomocí API Advice Slip.</p>
+                <div class="project-about__buttons">
+                  <a href="https://github.com/maresh-v/advice-generator" class="project-about__button project-about__button--code" target="_blank">
+                    <img src="/images/source-code-icon.png" alt="GitHub">
+                  </a>
+                  <a href="https://life-changer.maresh.cz/" class="project-about__button project-about__button--visit" target="_blank">
+                    <span>Prohlédnout &gt;</span>
+                  </a>
+                  <div class="project-about__guide-arrow">
+                    <span>GitHub</span>
+                  </div>
+                </div>
+                <p class="project-about__attribution">Zpracováno dle grafického návrhu frontendmentor.com</p>
+              </div>
+            </div>
+        </section>
+
+        <section class="skills">
+          <div class="skills-heading hidden">
+            <h2 class="skills-heading__main">Relevantní dovednosti</h2>
+            <p class="skills-heading__sub">Co umím a&nbsp;co ještě ne?</p>
+          </div>
+          <div class="skills-body">
+            <div class="skill hidden" id="html">
+              <div class="skill-wrapper">
+                <h3 class="skill__heading skill__heading--green">HTML :)</h3>
+                <p class="skill__text">S HTML jsem cesty poprvé zkřížil před 10 lety, takže bych řekl, že mě dnes už nemá čím překvapit. Určitě bych se ale mýlil. Nejdůležitější části HTML jsou mi dobře známé, a&nbsp;také se snažím používat sémantické HTML, jak jen je to možné.</p>
+              </div>
+            </div>
+            <div class="skill hidden" id="css">
+              <h3 class="skill__heading skill__heading--green">CSS / SASS :)</h3>
+              <p class="skill__text">Mám zkušenosti především s&nbsp;Flexboxem, pracoval jsem ale také s&nbsp;Gridem. Kdyby šlo do tuhého, poradím si i&nbsp;s&nbsp;floaty. Používám značení BEM a&nbsp;projekty organizuji dle vzoru 7-1. V SASS zanořuji, využívám proměnné či MIXINY. Všechny možnosti tohoto úžasného preprocesoru jsem ale ještě plně neprozkoumal. </p>
+            </div>
+            <div class="skill hidden" id="js">
+              <h3 class="skill__heading skill__heading--green">JavaScript :)</h3>
+              <p class="skill__text">Nedělá mi problémy běžná manipulace s&nbsp;DOM elementy, znám základy OOP, pracoval jsem s&nbsp;API a&nbsp;nejsou mi cizí ani praktické funkce ES6 – deklarace LET / CONST, ARROW funkce nebo třeba TEMPLATE LITERALS.
+                I&nbsp;když jsou fundamenty JS dávno za mnou, je mi jasné, že jsem s&nbsp;učením teprve na začátku.</p>
+            </div>
+            <div class="skill hidden" id="npm">
+              <h3 class="skill__heading skill__heading--orange">NPM <span>:|</span></h3>
+              <p class="skill__text">Dokážu si obstarat potřebné balíčky na práci, orientuji se v PACKAGE.JSON. Dosud jsem potřeboval hlavně SASS a&nbsp;POSTCSS.</p>
+            </div>
+            <div class="skill hidden" id="git">
+              <h3 class="skill__heading skill__heading--orange">GIT :|</h3>
+              <p class="skill__text">Vím, k čemu se GIT používá a&nbsp;znám jeho nejzákladnější příkazy. Snažím se ho využívat, ale na svých miniaturních projektech jsem k jeho praktickému prozkoumání zatím neměl mnoho příležitostí.</p>
+            </div>
+            <div class="skill hidden" id="framework">
+              <h3 class="skill__heading skill__heading--red">Front-end knihovna / framework :(</h3>
+              <p class="skill__text">Dosud jsem se soustředil  především na zlepšování svých znalostí a&nbsp;dovedností ve vanilla JavaScriptu, protože myslím, že čím lépe budu rozumět jeho konceptům, tím snáz, rychleji a&nbsp;zodpovědněji naskočím do světa FE frameworků a&nbsp;knihoven. A&nbsp;to je můj současný cíl. I&nbsp;když s&nbsp;žádnou z těchto technologií nemám praktické zkušenosti, jsem připraven se je intenzivně učit jak v práci, tak ve volném čase.</p>
+            </div>
+            <div class="skill hidden" id="typescript">
+              <h3 class="skill__heading skill__heading--red">TypeScript :(</h3>
+              <p class="skill__text">Vím, že v moderním front-endovém vývoji se bez TypeScriptu neobejdu. I&nbsp;proto bych se ho rád dříve nebo později naučil. Dosud jsem s&nbsp;ním nepracoval, ve škole jsem ale programoval v C#, takže syntax i&nbsp;koncepty jako OOP či datové typy jsou mi více než povědomé.</p>
+            </div>
+            <div class="skill hidden" id="figma">
+              <h3 class="skill__heading skill__heading--green">Figma, Adobe XD :) </h3>
+              <p class="skill__text">Neorientuji se v těchto aplikacích tak jako ostřílený grafik nebo UX designer, základní uživatelské dovednosti ale mám. Samozřejmě jsem schopen si z obou aplikací exportovat grafické podklady a&nbsp;hodnoty pro CSS.</p>
+            </div>
+            <div class="skill hidden" id="photoshop">
+              <h3 class="skill__heading skill__heading--green">Photoshop :) </h3>
+              <p class="skill__text">I když pro vlastní potřeby používám podobnou aplikaci Affinity Photo, práce v Adobe Photoshop mi nedělá problém. Tedy alespoň pokud jde o&nbsp;základní úpravy fotografií a&nbsp;export podkladů dodaných v PSD.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="experiences">
+          <div class="experience experience--edu hidden" data-card-deck="2">
+            <h2 class="experience__header experience__header--edu">Vzdělání</h2>
+            <div class="experience__card-deck experience__card-deck--edu">
+              <div class="card card--edu" data-card-type="group-2-top">
+                <h3 class="card__header">FSV UK</h3>
+                <h4 class="card__subheader">ŽURNALISTIKA (Bc.)</h4>
+                <p class="card__period">2019–2022</p>
+                <p class="card__text">Mému tehdejšímu copywriterskému Já se jevila žurnalistika jako smysluplná volba. I&nbsp;když mi bylo poměrně brzy jasné, že budu v životě dělat něco jiného, škola mě nakonec neuvěřitelně obohatila. Nejen jako studenta, ale především jako člověka. Musel jsem řešit vázvy, s&nbsp;jakými bych se jinak nesetkal, a&nbsp;dozvěděl jsem se věci, které by jinak zůstaly mimo můj zájem. Naučil jsem se vnímat a&nbsp;uvažovat v jiných rovinách, než ve kterých jsem žil před touto zkušeností.</p>
+              </div>
+          
+              <div class="card card--edu" data-card-type="group-2-bottom">
+                <h3 class="card__header">SPŠSE a&nbsp;VOŠ LIBEREC</h3>
+                <h4 class="card__subheader">INFORMAČNÍ TECHNOLOGIE</h4>
+                <p class="card__period">2013–2017</p>
+                <p class="card__text">Na střední škole jsem programoval v PHP, C#, C či Assembleru, prošel základy automatizace, pracoval v CADu, programoval CNC stroje, spravoval sítě, pájel drobnou elektroniku či zapojoval silnoproudé obvody. Nakonec jsem psal dlouhodobou maturitní práci o&nbsp;GPGPU programování pomocí C#. Ne že by mi v hlavě dodnes utkvělo závratné množství konkrétních informací, věřím ale, že jsem si odnesl slušný přehled o&nbsp;tom, co IT skrývá a&nbsp;nabízí. Také jsem se zde lépe seznámil s&nbsp;HTML, CSS a&nbsp;JavaScriptem – jazyky, s&nbsp;nimiž jsem mohl radit spolužákům.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="experience experience--work hidden" data-card-deck="1">
+            <h2 class="experience__header experience__header--work">Pracovní zkušenosti</h2>
+            <div class="experience__card-deck experience__card-deck--work">
+              <div class="card card--work" data-card-type="group-1-top">
+                <h3 class="card__header">COPYWRITER (IČO)</h3>
+                <h4 class="card__subheader">Alza.cz a.s.</h4>
+                <p class="card__period">2018–</p>
+                <p class="card__text">Po roce interní zkušenosti jsem začal s&nbsp;Alzou spolupracovat jako externista, a&nbsp;to v rozsahu plného úvazku. Vedle psaní článků jsem ze seniornější pozice také zadával práci a&nbsp;zodpovídal za články jiných autorů, které jsem dostal ke kontrole. Vedle toho jsem měl občas příležitost podpořit kapacity týmu kodérů a&nbsp;realizovat několik landing pages, grafických produktových popisků, a&nbsp;také jsem přišel s&nbsp;některými formáty, které se v rámci Alza.cz používají dodnes. Mimo jiné i&nbsp;díky flexibilitě, kterou mi externí spolupráce poskytovala, jsem mohl zároveň začít studovat VŠ.</p>
+              </div>
+          
+              <div class="card card--work" data-card-type="group-1-middle">
+                <h3 class="card__header">COPYWRITER (HPP)</h3>
+                <h4 class="card__subheader">Alza.cz a.s.</h4>
+                <p class="card__period">2017–2018 (12 měsíců)</p>
+                <p class="card__text">Do Alzy jsem nastoupil na plný úvazek hned v létě po maturitě. Pracoval jsem jako copywriter/redaktor interního magazínu. Ve skvělém týmu jsem se staral o&nbsp;články pokrývající počítače, notebooky, počítačový hardware a&nbsp;příslušenství. Psal jsem návody, novinky i&nbsp;recenze. Byla to pro mě tehdy práce snů a&nbsp;výborná zkušenost, díky které jsem měl příležitost nahlédnout do útrob kolosu, kterým Alza je. Během roku byl ale interní tým rozpuštěn a&nbsp;magazín už dále tvořili jen externisté.</p>
+              </div>
+          
+              <div class="card card--work" data-card-type="group-1-bottom">
+                <h3 class="card__header">FRONT-END KODÉR (PRAXE)</h3>
+                <h4 class="card__subheader">Pixelfield, s.r.o.</h4>
+                <p class="card__period">2016 (2 týdny)</p>
+                <p class="card__text">Firma Pixelfield mi umožnila absolvovat dvoutýdenní školní praxi v jejím týmu po boku zkušeného front-end kodéra. Ten mě seznámil s&nbsp;preprocesorem LESS a&nbsp;následně také kontroloval kvalitu mého kódu. Kódoval jsem tehdy klasické weby i&nbsp;landing pages, Šlo o&nbsp;neuvěřitelně cennou zkušenost. Poprvé jsem si díky ní uvědomil, jak rychle se dovedu učit, když něco aktivně dělám.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="footer hidden">
+          <p class="footer__text">Hledám novou příležitost a&nbsp;jsem stále na přijmu:</p>
+          <a href="https://www.linkedin.com/in/v%C3%ADt-mare%C5%A1-2b9583152" class="footer__button" target="_blank">Linkedin</a>
+          <a href="mailto:vit.mares@outlook.com" class="footer__mail">vit.mares@outlook.com</a>
+          <p class="footer__source">Tuto stránku najdete také na <a href="https://github.com/maresh-v/portfolio" target="_blank">GitHubu</a></p>
+        </footer>
+      </main>
+    </div>
+
+    <div class="stripes">
+      <div class="stripes__wrapper">
+        <img src="/images/stripes.svg" class="stripes__single stripes__single--top">
+        <img src="/images/stripes.svg" class="stripes__single stripes__single--middle-right">
+        <img src="/images/stripes.svg" class="stripes__single stripes__single--middle-left">
+        <img src="/images/stripes.svg" class="stripes__single stripes__single--bottom-left">
+        <img src="/images/stripes.svg" class="stripes__single stripes__single--bottom-right">
+      </div>
+    </div> 
+  </body>
+</html>

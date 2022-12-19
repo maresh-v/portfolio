@@ -1,0 +1,20 @@
+{
+  "name": "maresh-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio Maresh.cz",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass --watch scss/_main.scss css/style.css",
+    "postcss": "postcss css/style.css -d public"
+  },
+  "author": "Vít Mareš",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.18",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^15.0.0",
+    "postcss-minify": "^1.1.0",
+    "sass": "^1.53.0"
+  }
+}

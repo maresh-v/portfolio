@@ -1,0 +1,181 @@
+@use '../abstracts' as abs;
+
+/* Mixins */
+@mixin topCardGroup1{
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: min(40vw, 200px);
+    margin: auto;
+    transform: rotate(0deg);
+    z-index: 3;
+}
+
+@mixin middleCardGroup1 {
+    right: 0;
+    left: min(5vw, 30px);
+    bottom: 0;
+    top: 0px;
+    margin: auto;
+    transform: rotate(4deg);
+    z-index: 2;
+}
+
+@mixin bottomCardGroup1 {
+    right: 0;
+    left: min(10vw, 60px);
+    bottom: 0;
+    top: max(-40vw, -200px);
+    margin: auto;
+    transform: rotate(8deg);
+    z-index: 1;
+}
+
+@mixin topCardGroup2 {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: min(40vw, 150px);
+    margin: auto;
+    transform: rotate(-2deg);
+    z-index: 3;
+}
+
+@mixin bottomCardGroup2 {
+    right: 60px;
+    left: 0;
+    bottom: 0;
+    top: max(-40vw, -150px);
+    margin: auto;
+    transform: rotate(-8deg);
+    z-index: 1;
+}
+
+/* Animations */
+
+@keyframes group1MoveToBottom {
+    0%{
+        @include topCardGroup1();
+    }
+
+    50%{
+        left: 100%;
+        z-index: 3;
+    }
+
+    51%{
+        left: 100%;
+        z-index: 1;
+    }
+
+    100%{
+        @include bottomCardGroup1();
+    }
+}
+
+@keyframes group1MoveToMiddle {
+    0%{
+        @include bottomCardGroup1();
+    }
+
+    100%{
+        @include middleCardGroup1();
+    }
+}
+
+@keyframes group1MoveToTop {
+    0%{
+        @include middleCardGroup1();
+    }
+
+    100%{
+        @include topCardGroup1();
+    }
+}
+
+@keyframes group2MoveToBottom {
+    0%{
+        @include topCardGroup2();
+    }
+
+    50%{
+        left: -170%;
+        z-index: 3;
+
+    }
+
+    51%{
+        left: -170%;
+        z-index: 1;
+    }
+
+    100%{
+        @include bottomCardGroup2();
+    }
+}
+
+@keyframes group2MoveToTop {
+    0%{
+        @include bottomCardGroup2();
+    }
+
+    100%{
+        @include topCardGroup2();
+    }
+}
+
+/* Styles */
+
+[data-card-type]{
+    width: 90vw;
+    max-width: 450px;
+    aspect-ratio: 2 / 3;
+    position: absolute;
+    border: min(4.5vw, 20px) solid abs.$clr-white;
+    border-radius: min(6vw, 28px);
+    box-shadow: min(2.5vw, 10px) min(2.5vw, 10px) 0px abs.$clr-black;
+    transition: transform .2s ease-in-out;
+    cursor: pointer;
+
+    @include abs.lg{
+        width: 400px;
+        border: 20px solid abs.$clr-white;
+        border-radius: 28px;
+        box-shadow: 8px 8px 0px abs.$clr-black;
+    }
+}
+
+.animated{
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+}
+
+[data-card-type="group-1-top"]{
+    @include topCardGroup1();
+    animation-name: group1MoveToTop;
+    animation-duration: 0;
+}
+
+[data-card-type="group-1-middle"]{
+    @include middleCardGroup1();
+    animation-name: group1MoveToMiddle;
+    animation-duration: 0;
+}
+
+[data-card-type="group-1-bottom"]{
+    @include bottomCardGroup1();
+    animation-name: group1MoveToBottom;
+    animation-duration: 0;
+}
+
+[data-card-type="group-2-top"]{
+    @include topCardGroup2();
+    animation-name: group2MoveToTop;
+    animation-duration: 0;
+}
+
+[data-card-type="group-2-bottom"]{
+    @include bottomCardGroup2();
+    animation-name: group2MoveToBottom;
+    animation-duration: 0;
+}

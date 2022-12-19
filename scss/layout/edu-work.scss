@@ -1,0 +1,202 @@
+@use '../abstracts' as abs;
+
+.experiences{
+    margin-top: 10vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @include abs.lg{
+        margin-top: 0;
+        flex-direction: row;
+    }
+
+    &:before{
+        content: "Klik!";
+        width: 35vw;
+        height: 25vw;
+        top: 0;
+        right: max(-10vw, -50px);
+        display: block;
+        position: absolute;
+        background-image: url("../images/arrow-edu.png");
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: 65%;
+        font-size: 6vw;
+        transform: rotate(50deg);
+  
+        @include abs.lg{
+            width: 220px;
+            height: 155px;
+            top: -350px;
+            left: 0;
+            background-size: 65%;
+            font-size: 2.5rem;
+            transform: rotate(0deg);
+        }
+    }
+}
+
+.experience{
+    width: 100%;
+    margin-top: 5vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    @include abs.lg{
+        width: 50%;
+        margin-top: 0;
+    }
+
+    /*&--edu{
+        
+    }*/
+
+    &--work{
+
+        @include abs.lg{
+            left: -80px;
+            transform: rotate(8deg);
+
+            &.hidden{
+                transform: translateY(20%);
+            } 
+            
+            &.visible{
+                transform: rotate(8deg);
+            } 
+        }
+    }
+    
+    &__header{
+        font-family: Rubik, sans-serif;
+        font-size: 12vw;
+        line-height: 1.1;
+        color: abs.$clr-white;
+        text-shadow: .8vw .8vw 0px abs.$clr-black;
+        -webkit-text-stroke: .7vw abs.$clr-black; 
+
+        @include abs.md{
+            font-size: 8vw;
+            text-shadow: .55vw .55vw 0px abs.$clr-black;
+            -webkit-text-stroke: .45vw abs.$clr-black; 
+        }
+
+        @include abs.lg{
+            position: absolute;
+            z-index: 4;
+            font-size: 3rem;
+            text-shadow: .25rem .25rem 0px abs.$clr-black;
+            -webkit-text-stroke: .2rem abs.$clr-black; 
+        }
+
+        &--edu{
+            @include abs.lg{
+                top: 410px;
+                left: -10px;
+                transform: rotate(-92deg);
+            }
+        }
+
+        &--work{
+            @include abs.lg{
+                top: 580px;
+                left: -165px;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+
+    &__card-deck{
+        margin-bottom: 10px;
+
+        &--edu{
+            width: 100%;
+            height: 180vw;
+            max-height: 870px;
+            margin-top: 8vw;
+            position: relative;
+            
+            @include abs.lg{
+                width: 100%;
+                height: 1000px;
+                max-height: none;
+                margin-top: -300px;
+            }
+        }
+
+        &--work{
+            width: 100%;
+            height: 200vw;
+            max-height: 970px;
+            position: relative;
+
+            @include abs.lg{
+                width: 100%;
+                height: 1000px;
+                max-height: none;
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.card{
+    //defined also as a component in components/cards.scss
+    padding: min(3vw, 15px);
+    overflow: hidden;
+
+    @include abs.lg{
+        padding: 15px;
+    }
+
+    &--edu{
+        background-color: abs.$clr-card-red;
+    }
+
+    &--work{
+        background-color: abs.$clr-card-orange;
+    }
+
+    &__header{
+        font-size: min(6vw, 1.8rem);
+        color: abs.$clr-white;
+
+        @include abs.lg{
+            font-size: 2rem;
+        }
+    }
+
+    &__subheader{
+        font-size: min(4.8vw, 1.5rem);
+        color: abs.$clr-white;
+
+        @include abs.lg{
+            font-size: 1.3rem;
+        }
+    }
+
+    &__period{
+        font-size: min(4.8vw, 1.4rem);
+        font-weight: 400;
+        color: abs.$clr-white;
+
+        @include abs.lg{
+            font-size: 1.3rem;
+        }
+    }
+
+    &__text{
+        font-size: min(4.8vw, 1.45rem);
+        font-weight: 400;
+        margin-top: 2vw;
+        color: abs.$clr-white;
+
+        @include abs.lg{
+            font-size: 1.25rem;
+            margin-top: 1rem;
+        }
+    }
+}
